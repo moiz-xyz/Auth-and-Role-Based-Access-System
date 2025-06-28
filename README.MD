@@ -1,7 +1,3 @@
-Of course, Moiz! Below is a complete, attractive, and professional `README.md` for your **Role-Based Auth System** — followed by a catchy 2-line GitHub project description.
-
----
-
 ## ✅ `README.md` — for Your Role-Based Auth System
 
 ```markdown
