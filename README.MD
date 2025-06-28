@@ -133,6 +133,3 @@ MIT — feel free to use, modify, and share.
 ---
 
 ## 🔥 Built with ❤️ by Abdul Moiz
-```
-
----
