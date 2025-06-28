@@ -1,4 +1,5 @@
 import nodemiller from "nodemailer"
+
 import 'dotenv/config'
 const transporter = nodemiller.createTransport ({
     service : "gmail",
