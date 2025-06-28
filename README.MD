@@ -1,6 +1,4 @@
-## ✅ `README.md` — for Your Role-Based Auth System
 
-```markdown
 # 🔐 Role-Based Authentication System (Admin & User Access Control)
 
 Welcome to my **Role-Based Authentication System** — a secure and scalable user management backend built with **Node.js**, **Express**, and **JWT**. This system is designed for projects where access control between **Admin** and **User** roles is a must.
