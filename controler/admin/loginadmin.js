@@ -1,18 +1,19 @@
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
-import User from "../../modal/userSchema"
+import Admin from "../../modal/adminSchema"
 
-export const loginUser = async (req, res) => {
+export const loginAdmin = async (req, res) => {
 
   const { email , password } = req.body
+
   try {
 if (!(email && password) ) {
   return res.status(409).send({ status: 409, message: "Email or Password Required" })
 }
 
-const existeduser = await User.findOne( {email})
+const existeduser = await Admin.findOne( {email})
 if (!existeduser) {
-  return res.status(404).send({ status: 404, message: "User not found!" });
+  return res.status(404).send({ status: 404, message: "Admin not found!" });
 }
 
 
@@ -23,7 +24,7 @@ const compare_Password= await bcrypt.compare(password , existeduser.password)
         
    const token = jwt.sign({ _id: existeduser._id, email: existeduser.email }, process.env.SECRET_KEY, { expiresIn: "1h" })
        delete existeduser.password
-        return res.status(200).send({ status: 200, message: "User logged in  Successfully!", data: existeduser, token: token })
+        return res.status(200).send({ status: 200, message: "Admin logged in  Successfully!", data: existeduser, token: token })
     } 
     catch (error) {
         return res.status(500).send({ status: 500, message: error.message })

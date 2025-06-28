@@ -1,8 +1,9 @@
 import express from "express"
-import { createAdmin } from "../../controler/index.js";
+import { createAdmin, loginAdmin } from "../../controler/index.js";
 
 const router = express.Router();
-router.post("/login", createAdmin)
+router.post("/register", createAdmin)
+router.post("/login", loginAdmin)
 
 
 

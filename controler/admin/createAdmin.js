@@ -12,7 +12,7 @@ export const createAdmin = async (req, res) => {
     if (userexists) {
       return res.status(409).send({
         status: 409,
-        message: "User already exists",
+        message: "Admin already exists",
       });
     }
 
