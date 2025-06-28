@@ -28,6 +28,7 @@ export const createAdmin = async (req, res) => {
       {
         _id: createUser._id,
         email: createUser.email,
+        role : "admin"
       },
       process.env.SECRET_KEY,
       { expiresIn: "1h" }

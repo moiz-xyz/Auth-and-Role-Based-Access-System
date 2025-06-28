@@ -32,6 +32,7 @@ export const CreateUser = async (req, res) => {
       {
         _id: createUser._id,
         email: createUser.email,
+        role : "user"
       },
       process.env.SECRET_KEY,
       { expiresIn: "1h" }
